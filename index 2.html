@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MileSpace 爵士空間｜爵序大樂團 2025 入門團節奏組招募</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: url('https://i.imgur.com/Hwatg9N.jpeg') center center no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh;
+      width: 100%;
+      filter: brightness(0.8);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .countdown {
+      font-size: 2rem;
+      color: #FFD700;
+      margin-top: 20px;
+    }
+    section {
+      padding: 40px 16px;
+      max-width: 600px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 1s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+    h2 {
+      color: #FFD700;
+      border-bottom: 1px solid #FFD700;
+      padding-bottom: 0.3em;
+    }
+    .form-container iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+    }
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+    .social-links a {
+      color: #FFD700;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+</style>
+</head>
+<body>
+  <header></header>
+
+  <section style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+    <h1 style="text-align:center; font-size: 2.5rem; color: gold; margin-top: 40px;">爵序大樂團 2025｜爵士入門團 招募中！</h1>
+    <p style="text-align:center; font-size: 1.2rem; color: #f5f5f5;">🎵 第二期・節奏組（貝斯／鋼琴／吉他／爵士鼓）</p>
+    <div id="countdown" style="text-align:center; font-size: 1.8rem; color: #FFD700; margin-top: 20px;"></div>
+
+    <h2>📣 活動介紹</h2>
+    <p>
+      你是否對爵士樂充滿好奇，卻不知道如何踏出第一步？無論你來自古典或流行音樂背景，
+      或是嚮往與小樂團合奏，這個團隊將帶你一步步掌握節奏、風格、即興與默契！
+    </p>
+    <p>
+      本團隊由爵序大樂團指導與經營，2025 年度第二期正式招募中，歡迎熱愛音樂的你一同加入！
+    </p>
+  </section>
+
+  <section class="form-container" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+    <h2>📝 線上報名</h2>
+    <p>請點選下方按鈕前往報名表單：</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ_ZbAMkGY_HX0RaVuOIXWUYitrQiRbpNrVOGo648wGtvbRQ/viewform" target="_blank" style="display:inline-block; padding:14px 30px; background-color:#FFD700; color:#000; text-decoration:none; font-weight:bold; border-radius:8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 14px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.3)'">前往報名</a>
+  </section>
+
+  <section style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+    <h2>🔗 粉絲頁連結與聯絡方式</h2>
+    <p>
+      <strong>爵序大樂團粉絲頁連結：</strong><br />
+      <a href="https://www.facebook.com/jazzshiporchestra" target="_blank">https://www.facebook.com/jazzshiporchestra</a>
+      <br /><br />
+      聯絡信箱：jazzshiporchestra@gmail.com
+    </p>
+  </section>
+
+  <footer>
+    © 2025 MileSpace 爵士空間 ｜ 由爵序大樂團主辦
+  </footer>
+
+  <script>
+    const countdownEl = document.getElementById("countdown");
+    const eventDate = new Date("2025-05-25T00:00:00+08:00");
+    function updateCountdown() {
+      if (!countdownEl) return;
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        countdownEl.innerText = "🎉 活動進行中！";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      countdownEl.innerText = `📅 距離活動還有 ${days} 天`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+</body>
+</html>
